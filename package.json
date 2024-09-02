@@ -22,7 +22,7 @@
     "node": ">=18"
   },
   "simple-git-hooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "pnpx lint-staged"
   },
   "lint-staged": {
     "*": [
