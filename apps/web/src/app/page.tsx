@@ -5,7 +5,9 @@ import {
   DialogHeader,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { gameId } from "@/lib/utils"
 import { CoinsIcon, ScissorsIcon, UserIcon, UsersIcon } from "lucide-react"
+import Link from "next/link"
 
 const Page = () => {
   return (
@@ -54,7 +56,9 @@ const Page = () => {
             </DialogHeader>
 
             <div className="space-y-6">
-              <Button className="mt-8 w-full">NEW GAME</Button>
+              <Link href={"/multi/rock-paper-scissors/" + gameId()}>
+                <Button className="w-full">NEW GAME</Button>
+              </Link>
               <Button className="w-full">JOIN ROOM</Button>
             </div>
           </DialogContent>
